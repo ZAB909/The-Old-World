@@ -37,7 +37,7 @@
 
 //Lower leftmost right
 #define ui_specialattack "EAST-7,SOUTH"
-#define ui_combat_style "EAST-6,SOUTH"
+#define ui_combat_style "EAST-6,SOUTH+2"
 #define ui_combat_toggle "EAST-5,SOUTH"
 #define ui_intents "EAST-4,SOUTH"
 #define ui_acti_alt "EAST,SOUTH" //alternative intent switcher for when the interface is hidden (F12)
