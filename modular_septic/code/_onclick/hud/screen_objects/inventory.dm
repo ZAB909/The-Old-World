@@ -38,7 +38,7 @@
 			our_item.remove_filter("hover_outline")
 
 /atom/movable/screen/inventory/hand
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'modular_septic/icons/hud/quake/handjob_UI.dmi'
 	icon_full = null
 
 /atom/movable/screen/inventory/hand/update_icon_state()
