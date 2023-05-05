@@ -175,10 +175,6 @@
 /turf/open/floor/oworld/dirt
 	icon = 'modular_septic/icons/turf/oworld/dirt.dmi'
 	icon_state = "dirt1"
-//	------------------ DEEP MUD FLOOR ------------------
-/turf/open/floor/oworld/indestructible/deep_mud
-	icon = 'modular_septic/icons/turf/oworld/dirt.dmi'
-	icon_state = "0,0"
 //	------------------ MUD FLOOR ------------------
 /turf/open/floor/oworld/indestructible/mud
 	icon = 'modular_septic/icons/turf/oworld/dirt.dmi'
