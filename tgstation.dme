@@ -5480,4 +5480,5 @@
 #include "modular_septic\code\modules\vending\tiktok.dm"
 #include "modular_septic\interface\interface.dm"
 #include "modular_septic\code\game\turfs\open\oworldfloor\fancy_floor.dm"
+#include "modular_septic\code\game\turfs\closed\oworldwall\walls.dm"
 // END_INCLUDE
