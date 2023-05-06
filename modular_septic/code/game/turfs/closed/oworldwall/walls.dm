@@ -5,37 +5,24 @@
 	desc = "A timber and plastered wall, "
 	icon = 'modular_septic/icons/turf/oworld/walls/village.dmi
 	icon_state = "village0"
-	walltype = "village"
-	mineral = "wood"
-	integrity = 700
 
 /turf/closed/wall/oworld/wattle
 	name = "Wattle and daub Wall"
 	desc = "A wall built using intertwining twigs, plastered with mud. Not as strong as other forms of construction."
 	icon = 'modular_septic/icons/turf/oworld/walls/wattle.dmi'
 	icon_state = "wattle1"
-	walltype = "wattle"
-	mineral = "wood"
-	integrity = 450
-
 
 /turf/closed/wall/oworld/castle
 	name = "Stone brick wall"
 	desc = "A formidable wall made entirely of stone bricks. Capable of being the battlements of a castle."
 	icon = 'modular_septic/icons/turf/oworld/walls/brickstone.dmi'
 	icon_state = "brickstone0"
-	walltype = "brickstone"
-	mineral = "metal"
-	integrity = 1500
 
 /turf/closed/wall/oworld/dwarf
 	name = "Stone brick wall"
 	desc = "A formidable wall made entirely of stone bricks. Capable of being the battlements of a castle."
 	icon = 'modular_septic/icons/turf/oworld/walls/dwarf.dmi'
 	icon_state = "dwarfwall0"
-	walltype = "dwarfwall"
-	mineral = "metal"
-	integrity = 1500
 
 
 
@@ -44,18 +31,12 @@
 	desc = "An old wooden wall. For when metal is just too much work."
 	icon_state = "wood1"
 	icon = 'modular_septic/icons/turf/oworld/walls/woodenwall.dmi'
-	walltype = "wood"
-	mineral = "wood"
-	integrity = 450
 
 /turf/closed/wall/oworld/castle
 	name = "Stone brick wall"
 	desc = "A formidable wall made entirely of stone bricks. Capable of being the battlements of a castle."
 	icon = 'modular_septic/icons/turf/oworld/walls/brickstone.dmi'
 	icon_state = "brickstone0"
-	walltype = "brickstone"
-	mineral = "metal"
-	integrity = 1500
 /*
 /turf/simulated/wall/r_wall
 	icon_state = "rgeneric"
