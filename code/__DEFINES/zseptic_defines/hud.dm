@@ -64,7 +64,7 @@
 #define ui_rest "EAST-1,SOUTH+1"
 
 //Right (status indicators)
-#define ui_stats "EAST,SOUTH+14"
+#define ui_stats "WEST,SOUTH+14"
 #define ui_spacesuit "EAST,SOUTH+13"
 #define ui_surrender "EAST,SOUTH+13"
 #define ui_pressure "EAST,SOUTH+12"
@@ -93,26 +93,26 @@
 #define ui_fov "WEST+4,SOUTH+1"
 
 //Expand inventory bookmark
-#define ui_bookmark_off "WEST,SOUTH+1"
-#define ui_bookmark_on "WEST+4,SOUTH+1"
+#define ui_bookmark_off "WEST+0.25,SOUTH+9"
+#define ui_bookmark_on "WEST+4,SOUTH+9"
 
 //Pop-up inventory
-#define ui_shoes "WEST,SOUTH"
-#define ui_iclothing "WEST+1,SOUTH"
-#define ui_oclothing "WEST+2,SOUTH"
-#define ui_gloves "WEST+3,SOUTH"
-#define ui_mask "WEST+4,SOUTH"
+#define ui_shoes "WEST+1,SOUTH+7"
+#define ui_iclothing "WEST+2,SOUTH+7"
+#define ui_oclothing "WEST+2,SOUTH+8"
+#define ui_gloves "WEST+3,SOUTH+10"
+#define ui_mask "WEST+2,SOUTH+9"
 #define ui_head "WEST+5,SOUTH"
-#define ui_id "WEST+6,SOUTH"
-#define ui_belt "WEST+7,SOUTH"
-#define ui_sstore1 "WEST+8,SOUTH"
-#define ui_back "WEST+9,SOUTH"
-#define ui_storage2 "WEST+10,SOUTH" //right pocket
-#define ui_storage1 "WEST+13,SOUTH" //left pocket
-#define ui_neck "WEST,SOUTH+1"
+#define ui_id "WEST+1,SOUTH+8"
+#define ui_belt "WEST+2,SOUTH+4.5"
+#define ui_sstore1 "WEST+3,SOUTH+5.5"
+#define ui_back "WEST+1,SOUTH+5.5"
+#define ui_storage2 "WEST+8,SOUTH+0.5"//right pocket
+#define ui_storage1 "WEST+14.5,SOUTH+0.5" //left pocket
+#define ui_neck "WEST+3,SOUTH+9"
 #define ui_glasses "WEST+1,SOUTH+1"
-#define ui_ears "WEST+2,SOUTH+1"
-#define ui_ears_extra "WEST+3,SOUTH+1"
+#define ui_ears "WEST+1,SOUTH+10"
+#define ui_ears_extra "WEST+3,SOUTH+10"
 #define ui_wrist_right "WEST+4,SOUTH+1"
 #define ui_wrist_left "WEST+5,SOUTH+1"
 
