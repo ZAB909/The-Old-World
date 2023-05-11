@@ -100,9 +100,9 @@
 #define ui_shoes "WEST+1,SOUTH+7"
 #define ui_iclothing "WEST+2,SOUTH+7"
 #define ui_oclothing "WEST+2,SOUTH+8"
-#define ui_gloves "WEST+3,SOUTH+10"
+#define ui_gloves "WEST+3,SOUTH+8"
 #define ui_mask "WEST+2,SOUTH+9"
-#define ui_head "WEST+5,SOUTH"
+#define ui_head "WEST+2,SOUTH+10"
 #define ui_id "WEST+1,SOUTH+8"
 #define ui_belt "WEST+2,SOUTH+4.5"
 #define ui_sstore1 "WEST+3,SOUTH+5.5"
@@ -110,7 +110,7 @@
 #define ui_storage2 "WEST+8,SOUTH+0.5"//right pocket
 #define ui_storage1 "WEST+14.5,SOUTH+0.5" //left pocket
 #define ui_neck "WEST+3,SOUTH+9"
-#define ui_glasses "WEST+1,SOUTH+1"
+#define ui_glasses "WEST+1,SOUTH+9"
 #define ui_ears "WEST+1,SOUTH+10"
 #define ui_ears_extra "WEST+3,SOUTH+10"
 #define ui_wrist_right "WEST+4,SOUTH+1"
