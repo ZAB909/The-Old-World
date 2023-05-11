@@ -33,11 +33,17 @@
 /turf/closed/wall/oworld/wood
 	name = "wood wall"
 	desc = "An old wooden wall. For when metal is just too much work."
-	icon_state = "wood1"
 	icon = 'modular_septic/icons/turf/oworld/walls/woodenwall.dmi'
+	icon_state = "wood1"
 
 /turf/closed/wall/oworld/castle
 	name = "Stone brick wall"
 	desc = "A formidable wall made entirely of stone bricks. Capable of being the battlements of a castle."
 	icon = 'modular_septic/icons/turf/oworld/walls/brickstone.dmi'
-	icon_state = 'brickstone0'
+	icon_state = "brickstone0"
+
+/turf/closed/wall/oworld/fakecave
+	name = "Mountain rock"
+	desc = "An ancient mountain rock. Doesn't look diggable"
+	icon = 'modular_septic/icons/turf/oworld/cave/caves_new5.dmi'
+	icon_state = "wall15"
