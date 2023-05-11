@@ -194,7 +194,7 @@
 	inv_box.icon_state = "uniform"
 	inv_box.screen_loc = ui_iclothing
 	inv_box.hud = src
-	toggleable_inventory += inv_box
+	upper_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
 	/* SEPTIC EDIT REMOVAL
@@ -208,7 +208,7 @@
 	inv_box.icon_state = "suit"
 	inv_box.screen_loc = ui_oclothing
 	inv_box.hud = src
-	toggleable_inventory += inv_box
+	upper_inventory += inv_box
 
 	build_hand_slots()
 	/* SEPTIC EDIT REMOVAL
@@ -233,7 +233,7 @@
 	inv_box.screen_loc = ui_id
 	inv_box.slot_id = ITEM_SLOT_ID
 	inv_box.hud = src
-	static_inventory += inv_box
+	upper_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "mask"
@@ -242,7 +242,7 @@
 	inv_box.screen_loc = ui_mask
 	inv_box.slot_id = ITEM_SLOT_MASK
 	inv_box.hud = src
-	toggleable_inventory += inv_box
+	upper_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "neck"
@@ -361,7 +361,7 @@
 	inv_box.screen_loc = ui_gloves
 	inv_box.slot_id = ITEM_SLOT_GLOVES
 	inv_box.hud = src
-	toggleable_inventory += inv_box
+	upper_inventory += inv_box
 	//SEPTIC EDIT BEGIN
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		toggleable_inventory -= inv_box
@@ -376,10 +376,7 @@
 	inv_box.screen_loc = ui_glasses
 	inv_box.slot_id = ITEM_SLOT_EYES
 	inv_box.hud = src
-	/* SEPTIC EDIT REMOVAL
-	toggleable_inventory += inv_box
-	*/
-	//SEPTIC EDIT BEGIN
+
 	upper_inventory += inv_box
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		upper_inventory -= inv_box
@@ -425,7 +422,7 @@
 	inv_box.screen_loc = ui_head
 	inv_box.slot_id = ITEM_SLOT_HEAD
 	inv_box.hud = src
-	toggleable_inventory += inv_box
+	upper_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "shoes"
@@ -434,7 +431,7 @@
 	inv_box.screen_loc = ui_shoes
 	inv_box.slot_id = ITEM_SLOT_FEET
 	inv_box.hud = src
-	toggleable_inventory += inv_box
+	upper_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "belt"
@@ -656,16 +653,16 @@
 
 	var/mob/screenmob = viewer || H
 
-	//SEPTIC EDIT BEGIN
+
 	screenmob = viewer
 	if(!istype(screenmob))
 		screenmob = H
 	if(!screenmob.hud_used)
 		return
-	//SEPTIC EDIT END
+
 	if(screenmob.hud_used.inventory_shown && screenmob.hud_used.hud_shown)
-		//SEPTIC EDIT BEGIN
-		if(screenmob.hud_used.upper_inventory_shown)
+
+		if(screenmob.hud_used.upper_inventory_shown) // amogus
 			if(H.wear_neck)
 				H.wear_neck.screen_loc = ui_neck
 				screenmob.client.screen += H.wear_neck
@@ -678,7 +675,9 @@
 			if(H.ears_extra)
 				H.ears_extra.screen_loc = ui_ears_extra
 				screenmob.client.screen += H.ears_extra
-		else
+			if(H.head)
+				H.ears_extra.screen_loc = ui_head
+				screenmob.client.screen += H.head
 			if(H.wear_neck)
 				screenmob.client.screen -= H.wear_neck
 			if(H.glasses)
@@ -687,35 +686,37 @@
 				screenmob.client.screen -= H.ears
 			if(H.ears_extra)
 				screenmob.client.screen -= H.ears_extra
-		//SEPTIC EDIT END
+			if(H.head)
+				screenmob.client.screen -= H.head
+
 		if(H.shoes)
 			H.shoes.screen_loc = ui_shoes
 			screenmob.client.screen += H.shoes
 		if(H.gloves)
 			H.gloves.screen_loc = ui_gloves
 			screenmob.client.screen += H.gloves
-		/* SEPTIC EDIT REMOVAL
+
 		if(H.ears)
 			H.ears.screen_loc = ui_ears
 			screenmob.client.screen += H.ears
 		if(H.glasses)
 			H.glasses.screen_loc = ui_glasses
 			screenmob.client.screen += H.glasses
-		*/
+
 		if(H.w_uniform)
 			H.w_uniform.screen_loc = ui_iclothing
 			screenmob.client.screen += H.w_uniform
 		if(H.wear_suit)
 			H.wear_suit.screen_loc = ui_oclothing
 			screenmob.client.screen += H.wear_suit
-		/* SEPTIC EDIT REMOVAL
+
 		if(H.wear_mask)
 			H.wear_mask.screen_loc = ui_mask
 			screenmob.client.screen += H.wear_mask
 		if(H.wear_neck)
 			H.wear_neck.screen_loc = ui_neck
 			screenmob.client.screen += H.wear_neck
-		*/
+
 		if(H.head)
 			H.head.screen_loc = ui_head
 			screenmob.client.screen += H.head
@@ -729,19 +730,18 @@
 			screenmob.client.screen -= H.ears
 		if(H.ears_extra)
 			screenmob.client.screen -= H.ears_extra
-		//SEPTIC EDIT END
 		if(H.shoes) screenmob.client.screen -= H.shoes
 		if(H.gloves) screenmob.client.screen -= H.gloves
-		/* SEPTIC EDIT REMOVAL
+
 		if(H.ears) screenmob.client.screen -= H.ears
 		if(H.glasses) screenmob.client.screen -= H.glasses
-		*/
+
 		if(H.w_uniform) screenmob.client.screen -= H.w_uniform
 		if(H.wear_suit) screenmob.client.screen -= H.wear_suit
-		/* SEPTIC EDIT REMOVAL
+
 		if(H.wear_mask) screenmob.client.screen -= H.wear_mask
 		if(H.wear_neck) screenmob.client.screen -= H.wear_neck
-		*/
+
 		if(H.head) screenmob.client.screen -= H.head
 
 
