@@ -47,3 +47,9 @@
 	desc = "An ancient mountain rock. Doesn't look diggable"
 	icon = 'modular_septic/icons/turf/oworld/cave/caves_new5.dmi'
 	icon_state = "wall15"
+
+/turf/closed/wall/oworld/realcave
+	name = "Mountain rock"
+	desc = "An ancient mountain rock. Looks diggable"
+	icon = 'modular_septic/icons/turf/oworld/cave/caves_new.dmi'
+	icon_state = "wall15"
