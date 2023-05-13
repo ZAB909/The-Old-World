@@ -248,7 +248,7 @@
 "oIP" = (/obj/effect/floor_decal/spline/darkgrass{dir = 1},/turf/open/floor/oworld/dirt,/area/cadiaoutpost/oa/caves)
 "oRH" = (/obj/structure/bed/chair/wood{color = "grey"; name = "dark wooden chair"},/turf/open/floor/oworld/wood,/area/cadiaoutpost/oa/caves)
 "pqG" = (/obj/structure/fence/wattle,/turf/open/floor/oworld/wood{color = "grey"; name = "weathered wooden floor"},/area/cadiaoutpost/oa/caves)
-"pxl" = (/turf/simulated/mineral/snowycave,/area/cadiaoutpost/oa/caves)
+"pxl" = (/turf/closed/wall/oworld/fakecave,/area/cadiaoutpost/oa/caves)
 "pze" = (/obj/effect/decal/cleanable/blood/splatter,/turf/open/floor/oworld/dirt,/area/cadiaoutpost/oa/caves)
 "pNp" = (/obj/structure/table/reinforced,/obj/item/metal_bar{name = "gyrocopter pipe"},/obj/effect/floor_decal/turf/clockwork,/turf/open/floor/oworld/floor/dwarf,/area/cadiaoutpost/oa/caves)
 "pQf" = (/obj/structure/table/woodentable{color = "grey"; name = "dark wooden table frame"},/obj/item/paper_bin,/obj/item/pen,/turf/open/floor/oworld/wood{name = "worn wooden floor"; color = "#bbbbbb"; dirt = 1},/area/cadiaoutpost/oa/caves)
