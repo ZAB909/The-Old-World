@@ -721,7 +721,7 @@
 			H.head.screen_loc = ui_head
 			screenmob.client.screen += H.head
 	else
-		//SEPTIC EDIT BEGIN
+
 		if(H.wear_neck)
 			screenmob.client.screen -= H.wear_neck
 		if(H.glasses)
