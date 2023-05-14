@@ -1,8 +1,8 @@
 /proc/ui_equip_position(mob/M)
-	return "WEST+11,SOUTH+1"
+	return "WEST+11,SOUTH+2.5"
 
 /proc/ui_swaphand_position(mob/M, which = 1)
-	return "WEST+11,SOUTH+1"
+	return "WEST+11,SOUTH+5"
 
 /proc/ui_hand_position(i, pixel_x = 0) //values based on old hand ui positions (CENTER:-/+16,SOUTH:5)
 	var/x_off = (i % 2)
@@ -10,6 +10,8 @@
 		return"WEST+[11+x_off]:[pixel_x],SOUTH"
 	else
 		return"WEST+[11+x_off],SOUTH"
+
+
 
 //Non-widescreen defines
 #define ui_boxstorage1 "WEST,SOUTH+1"

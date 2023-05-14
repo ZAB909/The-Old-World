@@ -278,6 +278,7 @@
 	//SEPTIC EDIT END
 	inv_box.icon = ui_style
 	inv_box.icon_state = "pocket"
+	inv_box.icon_full = "pocket_occupied"
 	inv_box.screen_loc = ui_storage1
 	inv_box.slot_id = ITEM_SLOT_LPOCKET
 	inv_box.hud = src
@@ -298,6 +299,7 @@
 	//SEPTIC EDIT END
 	inv_box.icon = ui_style
 	inv_box.icon_state = "pocket"
+	inv_box.icon_full = "pocket_occupied"
 	inv_box.screen_loc = ui_storage2
 	inv_box.slot_id = ITEM_SLOT_RPOCKET
 	inv_box.hud = src
