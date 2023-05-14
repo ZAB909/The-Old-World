@@ -1,15 +1,16 @@
+/proc/ui_hand_position(i) //values based on old hand ui positions (CENTER:-/+16,SOUTH:5)
+//	var/x_off = null //-(!(i % 5))//
+//	var/y_off = null //round((i-1) / 5)//
+	return"CENTER+1:10,SOUTH+0:5" // left and right hands
+
 /proc/ui_equip_position(mob/M)
-	return "WEST+11,SOUTH+1"
+	//var/y_off = round((M.held_items.len-1) / 2) //values based on old equip ui position (CENTER: +/-16,SOUTH+1:5)
+	return "CENTER:-5,SOUTH+:5"
 
-/proc/ui_swaphand_position(mob/M, which = 1)
-	return "WEST+11,SOUTH+1"
-
-/proc/ui_hand_position(i, pixel_x = 0) //values based on old hand ui positions (CENTER:-/+16,SOUTH:5)
-	var/x_off = (i % 2)
-	if(pixel_x)
-		return"WEST+[11+x_off]:[pixel_x],SOUTH"
-	else
-		return"WEST+[11+x_off],SOUTH"
+/proc/ui_swaphand_position(mob/M, which = 1) //values based on old swaphand ui positions (CENTER: +/-16,SOUTH+1:5)
+//	var/x_off = which == 1 ? -1 : 0
+//	var/y_off = round((M.held_items.len-1) / 2)
+	return "CENTER+:5,SOUTH+[5]:5"
 
 //Non-widescreen defines
 #define ui_boxstorage1 "WEST,SOUTH+1"
