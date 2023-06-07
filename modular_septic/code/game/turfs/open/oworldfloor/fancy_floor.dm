@@ -254,7 +254,7 @@
  * Fake pits
  * Fake space
  */
-
+/*
 /turf/open/floor/wood
 	desc = "Stylish dark wood."
 	icon_state = "wood"
@@ -383,7 +383,7 @@
 /turf/open/floor/grass/fairy/spawniconchange()
 	icon_state = "fairygrass[rand(0,3)]"
 
-/turf/open/floor/grass/snow
+/turf/open/floor/snow
 	gender = PLURAL
 	name = "snow"
 	icon = 'icons/turf/snow.dmi'
@@ -400,19 +400,19 @@
 	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/grass/snow/setup_broken_states()
+/turf/open/floor/snow/setup_broken_states()
 	return list("snow_dug")
 
-/turf/open/floor/grass/snow/spawniconchange()
+/turf/open/floor/snow/spawniconchange()
 	return
 
-/turf/open/floor/grass/snow/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+/turf/open/floor/snow/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
 
-/turf/open/floor/grass/snow/crowbar_act(mob/living/user, obj/item/I)
+/turf/open/floor/snow/crowbar_act(mob/living/user, obj/item/I)
 	return
 
-/turf/open/floor/grass/snow/basalt //By your powers combined, I am captain planet
+/turf/open/floor/snow/basalt //By your powers combined, I am captain planet
 	gender = NEUTER
 	name = "volcanic floor"
 	icon = 'icons/turf/floors.dmi'
@@ -421,19 +421,19 @@
 	initial_gas_mix = OPENTURF_LOW_PRESSURE
 	slowdown = 0
 
-/turf/open/floor/grass/snow/basalt/spawniconchange()
+/turf/open/floor/snow/basalt/spawniconchange()
 	if(prob(15))
 		icon_state = "basalt[rand(0, 12)]"
 		set_basalt_light(src)
 
-/turf/open/floor/grass/snow/basalt/safe
+/turf/open/floor/snow/basalt/safe
 	planetary_atmos = FALSE
 
-/turf/open/floor/grass/snow/safe
+/turf/open/floor/snow/safe
 	slowdown = 1.5
 	planetary_atmos = FALSE
 
-/turf/open/floor/grass/snow/actually_safe
+/turf/open/floor/snow/actually_safe
 	slowdown = 0
 	planetary_atmos = FALSE
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
@@ -1047,3 +1047,4 @@
 	underlay_appearance.icon_state = SPACE_ICON_STATE
 	underlay_appearance.plane = PLANE_SPACE
 	return TRUE
+*/
