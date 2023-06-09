@@ -9,7 +9,7 @@
 // ------------------ WOOD ------------------
 /turf/open/floor/oworld/wood
 	desc = "Stylish dark wood."
-	icon = 'modular_septic/icons/turf/oworld/flooring/wood.dmi'
+	icon = "modular_septic/icons/turf/oworld/flooring/wood.dmi"
 	icon_state = "wood"
 	floor_tile = /obj/item/stack/tile/wood
 	footstep = FOOTSTEP_WOOD
@@ -93,7 +93,7 @@
 /turf/open/floor/oworld/grass
 	name = "grass patch"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
-	icon = 'modular_septic/icons/turf/oworld/grass.dmi'
+	icon = "modular_septic/icons/turf/oworld/grass.dmi"
 	icon_state = "grass0"
 	floor_tile = /obj/item/stack/tile/grass
 	flags_1 = NONE
@@ -103,6 +103,7 @@
 	clawfootstep = FOOTSTEP_GRASS
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	var/ore_type = /obj/item/stack/ore/glass
+	var/turfverb = "uproot"
 	tiled_dirt = FALSE
 
 /turf/open/floor/oworld/grass/setup_broken_states()
@@ -118,6 +119,7 @@
 /turf/open/floor/oworld/grass/attackby(obj/item/C, mob/user, params)
 	if((C.tool_behaviour == TOOL_SHOVEL) && params)
 		new ore_type(src, 2)
+		user.visible_message(span_notice("[user] digs up [src]."), span_notice("You [turfverb] [src]."))
 		playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
 		make_plating()
 	if(..())
@@ -126,7 +128,7 @@
 /turf/open/floor/oworld/darkgrass
 	name = "grass patch"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
-	icon = 'modular_septic/icons/turf/oworld/darkgrass.dmi'
+	icon = "modular_septic/icons/turf/oworld/darkgrass.dmi"
 	icon_state = "grass0"
 	floor_tile = /obj/item/stack/tile/grass
 	flags_1 = NONE
@@ -136,6 +138,7 @@
 	clawfootstep = FOOTSTEP_GRASS
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	var/ore_type = /obj/item/stack/ore/glass
+	var/turfverb = "uproot"
 	tiled_dirt = FALSE
 
 /turf/open/floor/oworld/darkgrass/setup_broken_states()
@@ -151,6 +154,7 @@
 /turf/open/floor/oworld/darkgrass/attackby(obj/item/C, mob/user, params)
 	if((C.tool_behaviour == TOOL_SHOVEL) && params)
 		new ore_type(src, 2)
+		user.visible_message(span_notice("[user] digs up [src]."), span_notice("You [turfverb] [src]."))
 		playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
 		make_plating()
 	if(..())
@@ -158,15 +162,15 @@
 //	------------------ DWARF FLOOR ------------------
 /turf/open/floor/oworld/floor/dwarf
 	icon = 'modular_septic/icons/turf/oworld/flooring/tiles.dmi'
-	icon_state = "stone"
+	icon_state = 'stone'
 //	------------------ CASTLE FLOOR ------------------
 /turf/open/floor/oworld/floor/castle
 	icon = 'modular_septic/icons/turf/oworld/walls/brickstone.dmi'
-	icon_state = "brickstone_floor"
+	icon_state = 'brickstone_floor'
 //	------------------ BRETONIAN FLOOR ------------------
 /turf/open/floor/oworld/floor/bretonnian
 	icon = 'modular_septic/icons/turf/oworld/flooring/bretonnian.dmi'
-	icon_state = "bretcob"
+	icon_state = 'bretcob'
 //	------------------ DIRT FLOOR ------------------
 /turf/open/floor/oworld/dirt
 	icon = 'modular_septic/icons/turf/oworld/dirt.dmi'
@@ -186,6 +190,7 @@
 	icon = 'modular_septic/icons/turf/oworld/snow.dmi'
 	desc = "Looks cold."
 	icon_state = "snow1"
+	ore_type = /obj/item/stack/sheet/mineral/snow
 	planetary_atmos = TRUE
 	floor_tile = null
 	initial_gas_mix = FROZEN_ATMOS
@@ -199,7 +204,7 @@
 /turf/open/floor/oworld/snow/setup_broken_states()
 	return list("snow_dug")
 
-/turf/open/floor/oworld/snow/proc/spawniconchange()
+/turf/open/floor/oworld/snow/spawniconchange()
 	icon_state = "snow[rand(1,9)]"
 
 /turf/open/floor/oworld/snow/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
@@ -211,8 +216,10 @@
 //	------------------ DESERT FLOOR ------------------
 /turf/open/floor/oworld/desert
 	desc = "Safely recreated turf for your hellplanet-scaping."
-	icon = 'modular_septic/icons/turf/oworld/desert.dmi'
+	icon = "modular_septic/icons/turf/oworld/desert.dmi"
 	icon_state = "desert"
+	ore_type = /obj/item/stack/ore/glass
+	turfverb = "dig up"
 	slowdown = 0
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SAND
@@ -231,13 +238,15 @@
 
 /turf/open/floor/oworld/desert/attackby(obj/item/C, mob/user, params)
 	if((C.tool_behaviour == TOOL_SHOVEL) && params)
+		new ore_type(src, 2)
+		user.visible_message(span_notice("[user] digs up [src]."), span_notice("You [turfverb] [src]."))
 		playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
 		make_plating()
 	if(..())
 		return
 //	------------------ STONE FLOOR ------------------
 /turf/open/floor/oworld/stone
-	icon = 'modular_septic/icons/turf/oworld/stonefloor.dmi'
+	icon = "modular_septic/icons/turf/oworld/stonefloor.dmi"
 	icon_state = "Stone0"
 //	------------------  ------------------
 

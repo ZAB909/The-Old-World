@@ -6,6 +6,90 @@
  * Fake pits
  * Fake space
  */
+turf/open/floor/oworld/wood
+	desc = "Stylish dark wood."
+	icon = "modular_septic/icons/turf/oworld/flooring"
+	icon_state = "wood"
+	floor_tile = /obj/item/stack/tile/wood
+	footstep = FOOTSTEP_WOOD
+	barefootstep = FOOTSTEP_WOOD_BAREFOOT
+	clawfootstep = FOOTSTEP_WOOD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+
+/turf/open/floor/wood/setup_broken_states()
+	return list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
+
+/turf/open/floor/wood/examine(mob/user)
+	. = ..()
+	. += span_notice("There's a few <b>screws</b> and a <b>small crack</b> visible.")
+
+/turf/open/floor/wood/screwdriver_act(mob/living/user, obj/item/I)
+	if(..())
+		return TRUE
+	return pry_tile(I, user) ? TRUE : FALSE
+
+/turf/open/floor/wood/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+	if(T.turf_type == type)
+		return
+	var/obj/item/tool = user.is_holding_item_of_type(/obj/item/screwdriver)
+	if(!tool)
+		tool = user.is_holding_item_of_type(/obj/item/crowbar)
+	if(!tool)
+		return
+	var/turf/open/floor/plating/P = pry_tile(tool, user, TRUE)
+	if(!istype(P))
+		return
+	P.attackby(T, user, params)
+
+/turf/open/floor/wood/pry_tile(obj/item/C, mob/user, silent = FALSE)
+	C.play_tool_sound(src, 80)
+	return remove_tile(user, silent, (C.tool_behaviour == TOOL_SCREWDRIVER))
+
+/turf/open/floor/wood/remove_tile(mob/user, silent = FALSE, make_tile = TRUE, force_plating)
+	if(broken || burnt)
+		broken = FALSE
+		burnt = FALSE
+		if(user && !silent)
+			to_chat(user, span_notice("You remove the broken planks."))
+	else
+		if(make_tile)
+			if(user && !silent)
+				to_chat(user, span_notice("You unscrew the planks."))
+			spawn_tile()
+		else
+			if(user && !silent)
+				to_chat(user, span_notice("You forcefully pry off the planks, destroying them in the process."))
+	return make_plating(force_plating)
+
+/turf/open/floor/wood/cold
+	temperature = 255.37
+
+/turf/open/floor/wood/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/wood/tile
+	icon_state = "wood_tile"
+	floor_tile = /obj/item/stack/tile/wood/tile
+
+/turf/open/floor/wood/tile/setup_broken_states()
+	return list("wood_tile-broken", "wood_tile-broken2", "wood_tile-broken3")
+
+/turf/open/floor/wood/parquet
+	icon_state = "wood_parquet"
+	floor_tile = /obj/item/stack/tile/wood/parquet
+
+/turf/open/floor/wood/parquet/setup_broken_states()
+	return list("wood_parquet-broken", "wood_parquet-broken2", "wood_parquet-broken3", "wood_parquet-broken4", "wood_parquet-broken5", "wood_parquet-broken6", "wood_parquet-broken7")
+
+/turf/open/floor/wood/large
+	icon_state = "wood_large"
+	floor_tile = /obj/item/stack/tile/wood/large
+
+/turf/open/floor/wood/large/setup_broken_states()
+	return list("wood_large-broken", "wood_large-broken2", "wood_large-broken3")
+
+
 /*
 	------------------------------------------------------------------
 	------------------ DOES NOT BELONG TO OLD WORLD ------------------
