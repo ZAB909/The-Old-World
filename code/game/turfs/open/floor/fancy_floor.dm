@@ -8,7 +8,7 @@
  */
 turf/open/floor/oworld/wood
 	desc = "Stylish dark wood."
-	icon = "modular_septic/icons/turf/oworld/flooring"
+	modular_septic/icons/turf/oworld/flooring
 	icon_state = "wood"
 	floor_tile = /obj/item/stack/tile/wood
 	footstep = FOOTSTEP_WOOD

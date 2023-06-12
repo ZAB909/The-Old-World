@@ -40,4 +40,4 @@
 	name = "Stone brick wall"
 	desc = "A formidable wall made entirely of stone bricks. Capable of being the battlements of a castle."
 	icon = 'modular_septic/icons/turf/oworld/walls/brickstone.dmi'
-	icon_state = 'brickstone0'
+	icon_state = "brickstone0"
