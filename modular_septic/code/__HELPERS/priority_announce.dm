@@ -71,7 +71,6 @@
 	new /datum/announcement(parsed_title, parsed_message)
 
 /proc/call_emergency_meeting(mob/living/user, area/button_zone)
-	user.LoadComponent(/datum/component/fraggot)
 
 /proc/print_command_report(text = "", title = null, announce=TRUE)
 	if(!title)

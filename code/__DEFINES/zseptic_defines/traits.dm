@@ -31,8 +31,8 @@
 #define TRAIT_WATER_BREATHING "water_breathing"
 /// Can't parry
 #define TRAIT_NOPARRY "no_parry"
-/// Fraggot system
-#define TRAIT_FRAGGOT "fraggot"
+/// Forsaken system
+#define TRAIT_FORSAKEN "forsaken"
 /// Fluoride stare
 #define TRAIT_FLUORIDE_STARE "fluoride_stare"
 /// Can't become zombie
