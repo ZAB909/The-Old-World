@@ -864,7 +864,7 @@
 /area/maintenance/liminal/darkclub)
 "fo" = (
 /obj/effect/turf_decal/plaque{
-	desc = This Pleaque commemorates Bob Joga, his quote, "NIGGERNIGGER GOD I HATE NIGEGERS FUCKING I WANT  TO FUCKING SHOOT A NIGGER FUCK I SHOT A NIGGER FUCK FUCK FUCK."
+	desc = This Pleaque commemorates Bob Joga, his quote, "He was a filthy schitzophrenic degenerate, nothing else to say here"
 	},
 /obj/effect/turf_decal/stripes{
 	dir = 1
@@ -2834,10 +2834,6 @@
 "sN" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
-	},
-/obj/effect/decal/cleanable/food/salt{
-	name = "cum";
-	desc = "A sizable pile of cum. Someone must be upset."
 	},
 /obj/effect/mob_spawn/human/corpse,
 /turf/open/floor/plating,

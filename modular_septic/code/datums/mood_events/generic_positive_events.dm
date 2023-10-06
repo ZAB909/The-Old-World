@@ -57,25 +57,4 @@
 	mood_change = 2
 	hidden = TRUE
 
-//Cum on face
-/datum/mood_event/creampie/bukkake
-	description = span_nicegreen("My face is <b>drenched</b> in cum!")
-	mood_change = 3
-	timeout = 5 MINUTES
-
-/datum/mood_event/creampie/cummies
-	description = span_nicegreen("My face is covered in cum.")
-	mood_change = 2
-	timeout = 3 MINUTES
-
-//Femcum on face
-/datum/mood_event/creampie/fembukkake
-	description = span_nicegreen("My face is <b>drenched</b> in squirt!")
-	mood_change = 3
-	timeout = 5 MINUTES
-
-/datum/mood_event/creampie/femcummies
-	description = span_nicegreen("My face is covered in squirt.")
-	mood_change = 2
-	timeout = 3 MINUTES
 

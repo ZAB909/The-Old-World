@@ -12,9 +12,7 @@ GLOBAL_LIST_INIT(shitfaceable, typecacheof(list(/mob/living/carbon/human)))
 	creamface = mutable_appearance('modular_septic/icons/effects/shit.dmi')
 	if(ishuman(parent))
 		var/mob/living/carbon/human/humie = parent
-		if(LAZYACCESS(humie.dna.species.mutant_bodyparts, "snout"))
-			creamface.icon_state = "shitface_lizard"
-		else if(ismonkey(humie))
+		if(ismonkey(humie))
 			creamface.icon_state = "shitface_monkey"
 		else
 			creamface.icon_state = "shitface_human"

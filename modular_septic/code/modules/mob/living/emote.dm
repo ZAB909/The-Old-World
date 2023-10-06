@@ -322,63 +322,6 @@
 	muzzle_ignore = TRUE
 	hands_use_check = FALSE
 
-// Oooo sex
-/datum/emote/living/sexymoan
-	key = "sexymoan"
-	key_third_person = "sexymoans"
-	message = "moans!"
-	emote_type = EMOTE_AUDIBLE
-	muzzle_ignore = TRUE
-	hands_use_check = FALSE
-	mob_type_allowed_typecache = /mob/living/carbon/human
-
-/datum/emote/living/sexymoan/get_sound(mob/living/user)
-	if(ishuman(user))
-		if(user.gender != FEMALE)
-			return "modular_septic/sound/sexo/moan_m[rand(1, 7)].ogg"
-		else
-			return "modular_septic/sound/sexo/moan_f[rand(1, 7)].ogg"
-	else
-		return ..()
-
-/datum/emote/living/sexymoan/run_emote(mob/living/carbon/human/user, params, type_override, intentional)
-	. = TRUE
-	if(!can_run_emote(user, TRUE, intentional))
-		return FALSE
-	var/msg = select_message_type(user, message, intentional)
-	if(params && message_param)
-		msg = select_param(user, params)
-
-	msg = pick("moans!", "moans in pleasure!")
-
-	if(!msg)
-		return
-
-	user.log_message(msg, LOG_EMOTE)
-	var/dchatmsg = span_horny("<b>[user]</b> [msg]")
-
-	var/tmp_sound = get_sound(user)
-	if(tmp_sound && (!only_forced_audio || !intentional) && !TIMER_COOLDOWN_CHECK(user, type))
-		TIMER_COOLDOWN_START(user, type, audio_cooldown)
-		playsound(user, tmp_sound, 50, vary)
-
-	var/user_turf = get_turf(user)
-	for(var/mob/ghost in GLOB.dead_mob_list)
-		if(!ghost.client || isnewplayer(ghost))
-			continue
-		if(ghost.stat == DEAD && ghost.client && user.client && (ghost.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(ghost in viewers(user_turf, null)))
-			ghost.show_message("<span class='emote'>[FOLLOW_LINK(ghost, user)] [dchatmsg]</span>")
-
-	if(emote_type == EMOTE_AUDIBLE)
-		user.audible_message(span_horny("<span class='emote'><b>[user]</b> [msg]</span>"))
-	else
-		user.visible_message(span_horny("<span class='emote'><b>[user]</b> [msg]</span>"))
-	var/list/hearers = get_hearers_in_view(DEFAULT_MESSAGE_RANGE, user)
-	for(var/mob/hearer in hearers)
-		if(user.runechat_prefs_check(hearer, NONE) && hearer.can_hear())
-			hearer.create_chat_message(src, raw_message = msg, runechat_flags = NONE)
-		hearer.show_message(message, MSG_AUDIBLE, null, MSG_VISUAL)
-
 // Le quake jump has arrive
 /datum/emote/living/jumpgrunt
 	key = "jumpgrunt"

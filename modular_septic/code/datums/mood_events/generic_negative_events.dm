@@ -76,7 +76,7 @@
 //Ate shit
 /datum/mood_event/creampie/shitface
 	description = span_infection("My face is covered in shit.")
-	mood_change = -2
+	mood_change = -6
 	timeout = 10 MINUTES
 
 //Gun pointed at us

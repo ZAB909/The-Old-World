@@ -29,10 +29,6 @@
 	list_reagents = list(/datum/reagent/consumable/pepsi = 30)
 	foodtype = SUGAR
 
-/obj/item/reagent_containers/food/drinks/soda_cans/pepsi/open_soda(mob/user)
-	. = ..()
-	AddComponent(/datum/component/temporary_pollution_emission, /datum/pollutant/cum, 5, 3 MINUTES)
-
 /obj/item/reagent_containers/food/drinks/soda_cans/pepsi/diet
 	name = "Diet Pepsi"
 	desc = "A refreshing cola that tastes like water and doesn't offer any benefits."

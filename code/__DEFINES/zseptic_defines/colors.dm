@@ -14,6 +14,4 @@
 
 #define COLOR_BROWN_SHIT "#815131"
 #define COLOR_YELLOW_PISS "#d6d33396"
-#define COLOR_WHITE_CUM "#fffae8e6"
-#define COLOR_WHITE_FEMCUM "#fffcf058"
 #define COLOR_BLUE_WATER "#d4f1f9"

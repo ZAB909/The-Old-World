@@ -14,14 +14,6 @@
 	descriptor = SCENT_DESC_ODOR
 	scent = "vomit"
 
-///Cum
-/datum/pollutant/cum
-	name = "Cum"
-	pollutant_flags = POLLUTANT_SMELL
-	smell_intensity = 1
-	descriptor = SCENT_DESC_ODOR
-	scent = "stale cum"
-
 ///Piss
 /datum/pollutant/urine
 	name = "Urine"

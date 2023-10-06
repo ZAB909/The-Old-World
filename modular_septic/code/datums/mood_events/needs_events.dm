@@ -59,21 +59,3 @@
 	description = span_necrosis("My stench is unbearable.")
 	mood_change = -6
 
-//sex!
-/datum/mood_event/goodsex
-	description = span_nicegreen("Having sex felt really good.")
-	mood_change = 4
-	timeout = 3 MINUTES
-
-/datum/mood_event/goodmasturbation
-	description = span_nicegreen("Masturbating felt really good.")
-	mood_change = 2
-	timeout = 3 MINUTES
-
-/datum/mood_event/needsex
-	description = span_love("I feel horny.")
-	mood_change = -2
-
-/datum/mood_event/reallyneedsex
-	description = span_userlove("I want to be RAVAGED!")
-	mood_change = -4
