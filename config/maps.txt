@@ -13,37 +13,16 @@ Format:
 	votable (is this map votable)
 endmap
 
-map metastation
+map combat_map
 	default
 	votable
-endmap
-
-map deltastation
-endmap
-
-map kilostation
-endmap
-
-map icebox
-endmap
-
-map tramstation
-endmap
-
-map runtimestation
 endmap
 
 map multiz_debug
 endmap
 
-map baluarte
+map runtimestation
 endmap
 
-map combat_map
-endmap
 
-map gringo
-endmap
 
-map breaker
-endmap
