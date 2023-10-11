@@ -3,8 +3,6 @@
 					BLOOD_STATE_XENO = 0, \
 					BLOOD_STATE_OIL = 0, \
 					BLOOD_STATE_SHIT = 0, \
-					BLOOD_STATE_CUM = 0, \
-					BLOOD_STATE_FEMCUM = 0, \
 					BLOOD_STATE_NOT_BLOODY = 0)
 
 /datum/component/bloodysoles/share_blood(obj/effect/decal/cleanable/pool)
@@ -24,10 +22,6 @@
 
 	if(last_blood_state == BLOOD_STATE_SHIT)
 		parent_atom.add_shit_DNA(pool.return_shit_DNA())
-	else if(last_blood_state == BLOOD_STATE_CUM)
-		parent_atom.add_cum_DNA(pool.return_cum_DNA())
-	else if(last_blood_state == BLOOD_STATE_FEMCUM)
-		parent_atom.add_femcum_DNA(pool.return_femcum_DNA())
 	else
 		parent_atom.add_blood_DNA(pool.return_blood_DNA())
 	update_icon()
@@ -47,10 +41,6 @@
 	switch(last_blood_state)
 		if(BLOOD_STATE_SHIT)
 			footprint_type = /obj/effect/decal/cleanable/blood/footprints/shit
-		if(BLOOD_STATE_CUM)
-			footprint_type = /obj/effect/decal/cleanable/blood/footprints/cum
-		if(BLOOD_STATE_FEMCUM)
-			footprint_type = /obj/effect/decal/cleanable/blood/footprints/femcum
 	if(half_our_blood >= BLOOD_FOOTPRINTS_MIN)
 		var/turf/oldLocTurf = get_turf(OldLoc)
 		var/obj/effect/decal/cleanable/blood/footprints/oldLocFP = find_pool_by_blood_state(oldLocTurf, footprint_type)
@@ -74,10 +64,6 @@
 				switch(last_blood_state)
 					if(BLOOD_STATE_SHIT)
 						oldLocFP.add_shit_DNA(parent_atom.return_shit_DNA())
-					if(BLOOD_STATE_CUM)
-						oldLocFP.add_cum_DNA(parent_atom.return_cum_DNA())
-					if(BLOOD_STATE_FEMCUM)
-						oldLocFP.add_femcum_DNA(parent_atom.return_femcum_DNA())
 					else
 						oldLocFP.add_blood_DNA(parent_atom.return_blood_DNA())
 				oldLocFP.update_appearance()
@@ -102,10 +88,6 @@
 			switch(last_blood_state)
 				if(BLOOD_STATE_SHIT)
 					FP.add_shit_DNA(parent_atom.return_shit_DNA())
-				if(BLOOD_STATE_CUM)
-					FP.add_cum_DNA(parent_atom.return_cum_DNA())
-				if(BLOOD_STATE_FEMCUM)
-					FP.add_femcum_DNA(parent_atom.return_femcum_DNA())
 				else
 					FP.add_blood_DNA(parent_atom.return_blood_DNA())
 			FP.update_appearance()
@@ -118,8 +100,6 @@
 					BLOOD_STATE_XENO = 0, \
 					BLOOD_STATE_OIL = 0, \
 					BLOOD_STATE_SHIT = 0, \
-					BLOOD_STATE_CUM = 0, \
-					BLOOD_STATE_FEMCUM = 0, \
 					BLOOD_STATE_NOT_BLOODY = 0)
 	last_blood_state = BLOOD_STATE_NOT_BLOODY
 	update_icon()
@@ -127,9 +107,6 @@
 
 /datum/component/bloodysoles/feet
 	var/static/mutable_appearance/shitty_feet
-	var/static/mutable_appearance/cummy_feet
-	var/static/mutable_appearance/femcummy_feet
-
 /datum/component/bloodysoles/feet/Initialize()
 	if(!iscarbon(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -141,12 +118,6 @@
 	if(!shitty_feet)
 		shitty_feet = mutable_appearance('modular_septic/icons/effects/blood.dmi', "shoeshit", SHOES_LAYER)
 		shitty_feet.color = COLOR_BROWN_SHIT
-	if(!cummy_feet)
-		cummy_feet = mutable_appearance('modular_septic/icons/effects/cum.dmi', "shoecum", SHOES_LAYER)
-		cummy_feet.color = COLOR_WHITE_CUM
-	if(!femcummy_feet)
-		femcummy_feet = mutable_appearance('modular_septic/icons/effects/femcum.dmi', "shoefemcum", SHOES_LAYER)
-		femcummy_feet.color = COLOR_WHITE_FEMCUM
 
 	RegisterSignal(parent, COMSIG_COMPONENT_CLEAN_ACT, .proc/on_clean)
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, .proc/on_moved)
@@ -174,19 +145,3 @@
 					human.apply_overlay(SHOES_LAYER)
 				else
 					human.update_inv_shoes()
-			if(BLOOD_STATE_CUM)
-				if(bloody_shoes[BLOOD_STATE_CUM] > 0 && !is_obscured())
-					human.remove_overlay(SHOES_LAYER)
-					human.overlays_standing[SHOES_LAYER] = cummy_feet
-					human.apply_overlay(SHOES_LAYER)
-				else
-					human.update_inv_shoes()
-			if(BLOOD_STATE_FEMCUM)
-				if(bloody_shoes[BLOOD_STATE_FEMCUM] > 0 && !is_obscured())
-					human.remove_overlay(SHOES_LAYER)
-					human.overlays_standing[SHOES_LAYER] = femcummy_feet
-					human.apply_overlay(SHOES_LAYER)
-				else
-					human.update_inv_shoes()
-			else
-				human.update_inv_shoes()
