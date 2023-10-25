@@ -116,11 +116,11 @@
 
 			if(!istype(requested_preference, /datum/preference/tri_color))
 				return FALSE
-
+/*
 			var/list/new_color_list = read_preference(/datum/preference/tri_color/mutant_colors)
 			if(!update_preference(requested_preference, new_color_list))
 				return FALSE
-
+*/
 			return TRUE
 		if("set_color_default_colors")
 			var/requested_preference_key = params["preference"]
@@ -137,6 +137,7 @@
 				return FALSE
 
 			return TRUE
+/*
 		if("set_color_mutant_colors")
 			var/requested_preference_key = params["preference"]
 
@@ -152,7 +153,7 @@
 				return FALSE
 
 			return TRUE
-
+*/
 /datum/preferences/apply_all_client_preferences()
 	for (var/datum/preference/preference as anything in get_preferences_in_priority_order())
 		if (preference.savefile_identifier != PREFERENCE_PLAYER)
@@ -238,14 +239,16 @@
 
 /datum/preferences/proc/get_features()
 	var/list/features = list()
-
+/*
 	var/list/mutant_colors = read_preference(/datum/preference/tri_color/mutant_colors)
+*/
 	var/uses_skintones = read_preference(/datum/preference/toggle/skin_tone)
 	var/skin_tone = read_preference(/datum/preference/choiced/skin_tone)
-
+/*
 	features["mcolor"] = LAZYACCESS(mutant_colors, 1)
 	features["mcolor2"] = LAZYACCESS(mutant_colors, 2)
 	features["mcolor3"] = LAZYACCESS(mutant_colors, 3)
+*/
 	features["uses_skintones"] = uses_skintones
 	features["skin_tone"] = skin_tone
 	features["skin_color"] = skintone2hex(skin_tone)

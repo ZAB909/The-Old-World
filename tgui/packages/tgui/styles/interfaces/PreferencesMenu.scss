@@ -15,10 +15,11 @@ $department_map: (
   'Cargo': colors.$brown,
   'Service': colors.$green,
   'Silicon': colors.$pink,
-  'Nobility': colors.$blue,
-  'Bourgeouis': colors.$yellow,
-  'Proletariat': colors.$green,
-  'Unpeople': colors.$brown,
+  'Nobility': #ffd092,
+  'Contractors':#ff8139,
+  'Institute':#580000,
+  'Laborers': #57a300,
+  'Slaves': colors.$brown,
 );
 
 .PreferencesMenu {

@@ -38,3 +38,7 @@ export const Science: Department = {
 export const Silicon: Department = {
   head: "AI",
 };
+
+export const Explorers: Department = {
+  head: "Explorers",
+};

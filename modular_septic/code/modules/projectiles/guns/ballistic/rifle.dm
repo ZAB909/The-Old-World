@@ -343,6 +343,7 @@
 		"duration" = 2,
 	)
 
+//BASE BOLT ACTION RIFLE
 /obj/item/gun/ballistic/rifle/boltaction/remis
 	worn_icon = 'modular_septic/icons/obj/items/guns/worn/back.dmi'
 	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
@@ -389,6 +390,20 @@
 	can_suppress = FALSE
 	mag_type = /obj/item/ammo_box/magazine/internal/federson
 	rack_delay = 4
+
+//BASE BREAK ACTION RIFLE
+/obj/item/gun/ballistic/rifle/breakaction
+	worn_icon = 'modular_septic/icons/obj/items/guns/worn/back.dmi'
+	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
+	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	pb_knockback = 0
+	empty_icon_state = FALSE
+	bolt_type = BOLT_TYPE_BREAK_ACTION
+	can_suppress = FALSE
+	safety_flags = NONE
+	semi_auto = TRUE
+	cylinder_shows_open = TRUE
 
 //G36
 /obj/item/gun/ballistic/automatic/remis/g36

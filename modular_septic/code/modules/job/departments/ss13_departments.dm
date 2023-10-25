@@ -21,3 +21,15 @@
 
 /datum/job_department/silicon
 	display_order = 27
+
+/datum/job_department/nobility
+    display_order = 28
+
+/datum/job_department/institute
+    display_order = 29
+
+/datum/job_department/contractors
+    display_order = 30
+
+/datum/job_department/laborers
+    display_order = 31
