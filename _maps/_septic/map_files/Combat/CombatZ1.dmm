@@ -62,22 +62,13 @@
 /turf/open/floor/iron/dark,
 /area/maintenance/liminal/intro)
 "cu" = (
-/obj/machinery/door/metal_door/south,
 /turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/intro)
-"cx" = (
-/obj/machinery/door/metal_door/east,
-/turf/open/floor/iron,
 /area/maintenance/liminal/intro)
 "cX" = (
 /obj/structure/toilet{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/maintenance/liminal/denominator)
-"ds" = (
-/obj/machinery/door/metal_door/north,
-/turf/open/floor/iron/dark/smooth_large,
 /area/maintenance/liminal/denominator)
 "dA" = (
 /obj/structure/table/reinforced,
@@ -133,10 +124,6 @@
 /obj/effect/turf_decal/siding/wideplating/dark,
 /turf/open/floor/iron,
 /area/maintenance/liminal/intro)
-"fM" = (
-/obj/machinery/door/metal_door/east,
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/intro)
 "fV" = (
 /obj/item/cigbutt,
 /obj/item/cigbutt{
@@ -172,7 +159,6 @@
 /turf/open/floor/iron/freezer,
 /area/maintenance/liminal/intro)
 "hZ" = (
-/obj/machinery/door/metal_door/south,
 /turf/open/floor/iron/large,
 /area/maintenance/liminal/intro)
 "ia" = (
@@ -196,7 +182,6 @@
 /turf/open/floor/iron/dark,
 /area/maintenance/liminal/denominator)
 "ir" = (
-/obj/machinery/door/metal_door/wood_door/north,
 /turf/open/floor/iron/dark/corner{
 	dir = 8
 	},
@@ -206,10 +191,6 @@
 /obj/machinery/light/red/directional/south,
 /turf/open/floor/grass/snow,
 /area/maintenance/liminal/denominator)
-"iG" = (
-/obj/machinery/door/metal_door/north,
-/turf/open/floor/iron/large,
-/area/maintenance/liminal/intro)
 "iO" = (
 /obj/machinery/light/small/red/directional/east,
 /obj/effect/turf_decal/stripes{
@@ -219,11 +200,6 @@
 	dir = 1
 	},
 /area/maintenance/liminal/intro)
-"iZ" = (
-/obj/machinery/door/metal_door/south,
-/obj/structure/lattice/catwalk,
-/turf/open/floor/plating,
-/area/maintenance/liminal/denominator)
 "jf" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/floor/grass,
@@ -293,7 +269,6 @@
 	},
 /area/maintenance/liminal/intro)
 "ml" = (
-/obj/machinery/door/metal_door/wood_door/south,
 /turf/open/floor/iron/dark/corner,
 /area/maintenance/liminal/intro)
 "mK" = (
@@ -349,10 +324,6 @@
 /obj/structure/bed/maint,
 /turf/open/floor/plating,
 /area/maintenance/liminal/denominator)
-"po" = (
-/obj/machinery/door/metal_door/north,
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/intro)
 "pH" = (
 /obj/structure/table/reinforced,
 /obj/item/simcard,
@@ -455,8 +426,8 @@
 	},
 /area/maintenance/liminal/intro)
 "tL" = (
-/obj/machinery/door/metal_door/wood_door/south,
-/turf/open/floor/iron/large,
+/obj/effect/landmark/start/expedition_leader,
+/turf/open/floor/iron,
 /area/maintenance/liminal/intro)
 "tP" = (
 /turf/closed/wall/r_wall,
@@ -547,10 +518,6 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/maintenance/liminal/denominator/barracks)
-"yQ" = (
-/obj/machinery/door/metal_door/east,
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/denominator)
 "zE" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/dark,
@@ -729,10 +696,6 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/grass,
 /area/maintenance/liminal/denominator)
-"Hl" = (
-/obj/machinery/door/metal_door/west,
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/denominator)
 "HJ" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/ballistic/revolver/remis/poppy,
@@ -757,16 +720,6 @@
 /obj/structure/table/wood,
 /obj/item/gun/ballistic/revolver/remis/nova/pluspee,
 /turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/denominator)
-"Ix" = (
-/obj/machinery/door/metal_door/south,
-/turf/open/floor/iron/freezer,
-/area/maintenance/liminal/intro)
-"IB" = (
-/obj/machinery/door/metal_door/north{
-	id_tag = "Prison"
-	},
-/turf/open/floor/plating,
 /area/maintenance/liminal/denominator)
 "ID" = (
 /obj/machinery/light/red/directional/west,
@@ -830,10 +783,6 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/maintenance/liminal/intro)
-"Ku" = (
-/obj/machinery/door/metal_door/north,
-/turf/open/floor/iron/dark,
-/area/maintenance/liminal/denominator)
 "Ld" = (
 /turf/open/floor/iron/dark/smooth_large,
 /area/maintenance/liminal/denominator)
@@ -907,7 +856,6 @@
 /turf/open/floor/iron/dark,
 /area/maintenance/liminal/denominator)
 "Oy" = (
-/obj/machinery/door/metal_door/east,
 /turf/open/floor/iron/large,
 /area/maintenance/liminal/intro/barracks)
 "OI" = (
@@ -951,14 +899,6 @@
 /obj/structure/lattice,
 /turf/open/floor/plating,
 /area/maintenance/liminal/denominator)
-"Pl" = (
-/obj/machinery/door/metal_door/wood_door/north,
-/turf/open/floor/iron/large,
-/area/maintenance/liminal/intro)
-"PB" = (
-/obj/machinery/door/metal_door/east,
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/denominator/barracks)
 "PQ" = (
 /obj/effect/turf_decal/tile/red/anticorner{
 	dir = 1
@@ -1021,10 +961,6 @@
 /obj/item/gun/ballistic/shotgun/denominator,
 /turf/open/floor/plating,
 /area/maintenance/liminal/denominator)
-"RZ" = (
-/obj/machinery/door/metal_door/south,
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/denominator)
 "Sb" = (
 /obj/structure/chair/stool{
 	dir = 8
@@ -1032,7 +968,6 @@
 /turf/open/floor/circuit/red/anim,
 /area/maintenance/liminal/denominator)
 "Sg" = (
-/obj/machinery/door/metal_door/north,
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating,
 /area/maintenance/liminal/denominator)
@@ -1134,12 +1069,6 @@
 /obj/item/clothing/suit/hazardvest,
 /turf/open/floor/iron/dark,
 /area/maintenance/liminal/denominator)
-"VW" = (
-/obj/machinery/door/metal_door/south{
-	id_tag = "Prison"
-	},
-/turf/open/floor/iron/dark/smooth_large,
-/area/maintenance/liminal/denominator)
 "Wk" = (
 /obj/effect/turf_decal/arrows,
 /turf/open/floor/iron,
@@ -1224,10 +1153,6 @@
 /obj/machinery/light/small/red/directional/west,
 /turf/open/floor/iron/dark,
 /area/maintenance/liminal/intro)
-"XO" = (
-/obj/machinery/door/metal_door/west,
-/turf/open/floor/iron/large,
-/area/maintenance/liminal/intro/barracks)
 "Yb" = (
 /obj/machinery/computer/security/telescreen/entertainment/directional/north{
 	pixel_y = 30
@@ -1239,16 +1164,6 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/maintenance/liminal/denominator)
-"YA" = (
-/obj/machinery/door/metal_door/west,
-/turf/open/floor/iron,
-/area/maintenance/liminal/intro)
-"YE" = (
-/obj/machinery/door/metal_door/north{
-	id_tag = "Prison"
-	},
-/turf/open/floor/iron/dark/smooth_large,
 /area/maintenance/liminal/denominator)
 "YO" = (
 /obj/structure/closet/crate,
@@ -1721,7 +1636,7 @@ Wr
 Wr
 om
 EN
-iZ
+Sg
 Fv
 Xm
 Xm
@@ -1729,7 +1644,6 @@ Xm
 Xm
 Xm
 Fv
-RZ
 Ld
 Ld
 Ld
@@ -1737,7 +1651,8 @@ Ld
 Ld
 Ld
 Ld
-RZ
+Ld
+Ld
 Wr
 Wr
 Wr
@@ -1851,7 +1766,6 @@ qT
 qT
 qT
 Fv
-ds
 Ld
 Ld
 Ld
@@ -1859,7 +1773,8 @@ Ld
 Ld
 Ld
 Ld
-ds
+Ld
+Ld
 Wr
 Wr
 aM
@@ -1986,7 +1901,7 @@ Yr
 NZ
 Wr
 Wr
-ds
+Ld
 Wr
 Wr
 tP
@@ -2099,7 +2014,7 @@ tP
 jf
 GV
 og
-PB
+Kh
 Vg
 Vg
 og
@@ -2716,8 +2631,8 @@ og
 og
 tP
 oH
-yQ
-yQ
+Ld
+Ld
 oH
 tP
 tP
@@ -3087,7 +3002,7 @@ Ld
 Ld
 Ld
 Wr
-Ku
+Wr
 Wr
 Bs
 Ih
@@ -3448,8 +3363,8 @@ tP
 tP
 tP
 oH
-Hl
-Hl
+Ld
+Ld
 oH
 tP
 tP
@@ -3690,12 +3605,12 @@ JN
 JN
 tP
 AL
-IB
+ab
 TG
 Ld
 Ld
 sL
-VW
+Ld
 WC
 tP
 JN
@@ -4056,12 +3971,12 @@ JN
 JN
 tP
 ST
-YE
+Ld
 TG
 Ld
 Ld
 sL
-VW
+Ld
 WC
 tP
 JN
@@ -4422,12 +4337,12 @@ tP
 ij
 Mp
 sX
-YE
+Ld
 il
 Ld
 Ld
 jH
-VW
+Ld
 WC
 tP
 JN
@@ -8454,7 +8369,7 @@ ZX
 Rk
 Xa
 Xa
-Ix
+Xa
 ee
 ZX
 JN
@@ -8698,7 +8613,7 @@ ZX
 QA
 Xa
 Xa
-Ix
+Xa
 Km
 ZX
 JN
@@ -8940,7 +8855,7 @@ jr
 jr
 ZX
 ZX
-cx
+uc
 ZX
 ZX
 CI
@@ -9294,16 +9209,16 @@ gs
 gs
 ZX
 ig
-XO
+Oy
 jr
 ig
-XO
+Oy
 jr
 ig
-XO
+Oy
 jr
 ig
-XO
+Oy
 ZX
 ZX
 uc
@@ -9427,7 +9342,7 @@ lJ
 SC
 SC
 SC
-tL
+hZ
 uc
 Wk
 fK
@@ -9549,7 +9464,7 @@ bV
 TO
 TO
 TO
-Pl
+hZ
 uc
 Wk
 fK
@@ -10020,7 +9935,7 @@ ZX
 ZX
 ZX
 OI
-fM
+cu
 OI
 ZX
 ZX
@@ -10160,7 +10075,7 @@ LS
 ia
 tC
 uc
-uc
+tL
 Wk
 hZ
 QE
@@ -10284,12 +10199,12 @@ oA
 uc
 uc
 Wk
-iG
+hZ
 iO
 sQ
 kV
 iO
-iG
+hZ
 uc
 bu
 Tg
@@ -10758,16 +10673,16 @@ gs
 gs
 ZX
 ig
-XO
+Oy
 jr
 ig
-XO
+Oy
 jr
 ig
-XO
+Oy
 jr
 ig
-XO
+Oy
 ZX
 ZX
 uc
@@ -10997,7 +10912,7 @@ gs
 gs
 gs
 gs
-po
+cu
 gs
 gs
 OI
@@ -11013,7 +10928,7 @@ bV
 TO
 TO
 TO
-iG
+hZ
 uc
 Wk
 fK
@@ -11502,7 +11417,7 @@ jr
 jr
 ZX
 ZX
-YA
+uc
 ZX
 ZX
 ZX

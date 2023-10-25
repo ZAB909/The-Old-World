@@ -28,19 +28,21 @@
 	// How?
 	if(!islist(preferences.body_markings))
 		preferences.body_markings = list()
-
+    /*
 	var/mismatched_parts = preferences.read_preference(/datum/preference/toggle/mismatched_parts)
+	*/
 	var/datum/species/species_type = preferences.read_preference(/datum/preference/choiced/species)
 
 	var/list/presets = list()
 	for(var/body_marking_set in GLOB.body_marking_sets)
 		presets += body_marking_set
+	/*
 	if(!mismatched_parts)
 		for(var/name in presets)
 			var/datum/body_marking_set/body_marking_set = GLOB.body_marking_sets[name]
 			if(body_marking_set.recommended_species && !(initial(species_type.id) in body_marking_set.recommended_species))
 				presets -= name
-
+    */
 	data["body_marking_sets"] = presets
 
 	var/list/marking_parts = list()

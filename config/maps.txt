@@ -13,15 +13,11 @@ Format:
 	votable (is this map votable)
 endmap
 
-map combat_map
-	default
-	votable
-endmap
-
 map multiz_debug
 endmap
 
 map runtimestation
+    default
 endmap
 
 

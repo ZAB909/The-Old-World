@@ -1,6 +1,6 @@
 /obj/item/food/canned
-	tetris_width = 32
-	tetris_height = 32
+	tetris_width = 96
+	tetris_height = 96
 
 /obj/item/food/canned/proc/open_can(mob/user)
 	to_chat(user, span_notice("I pop the tab of \the [src]."))

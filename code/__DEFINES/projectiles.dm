@@ -49,7 +49,7 @@ GLOBAL_LIST_EMPTY_TYPED(proj_by_path_key, /obj/projectile) // A list of projecti
 /// The acliber used by foam force and donksoft toy guns.
 #define CALIBER_FOAM "foam_force"
 /// The caliber used by the bow and arrow.
-#define CALIBER_ARROW "arrow"
+//#define CALIBER_ARROW "arrow"
 /// The caliber used by the harpoon gun.
 #define CALIBER_HARPOON "harpoon"
 /// The caliber used by the meat hook.

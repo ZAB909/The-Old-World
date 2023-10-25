@@ -90,3 +90,14 @@
 	caliber = CALIBER_276
 	projectile_type = /obj/projectile/bullet/a276
 	stack_type = /obj/item/ammo_box/magazine/ammo_stack/a276
+
+/obj/item/ammo_casing/a276/inc
+	name = ".276 incendiary Federson bullet casing"
+	desc = "A .276 Federson bullet casing."
+	icon_state = "c762"
+	base_icon_state = "c762"
+	world_icon_state = "762-casing"
+	caliber = CALIBER_276
+	projectile_type = /obj/projectile/bullet/incendiary/a276
+	stack_type = /obj/item/ammo_box/magazine/ammo_stack/a276/inc
+

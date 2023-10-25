@@ -158,26 +158,6 @@ export const FeatureColorInput = (props: FeatureValueProps<string>) => {
           )}
         </Button>
       </Stack.Item>
-      <Stack.Item>
-        <Button
-          tooltipPosition="top"
-          tooltip="Set mutant colors"
-          onClick={() => {
-            props.act("set_color_mutant_colors", {
-              preference: props.featureId,
-            });
-          }}>
-          {!props.shrink && (
-            <Box>
-              Set mutant
-            </Box>
-          ) || (
-            <Box>
-              M
-            </Box>
-          )}
-        </Button>
-      </Stack.Item>
     </Stack>
   );
 };
@@ -225,58 +205,6 @@ export const FeatureTriColorInput = (props: FeatureValueProps<string[]>) => {
       </Stack.Item>
     );
   };
-  return (
-    <Stack
-      vertical={false}>
-      {stackItemFromValue(0)}
-      {stackItemFromValue(1)}
-      {stackItemFromValue(2)}
-      {props.featureId !== "mutant_colors" && (
-        <Stack.Item>
-          <Button
-            tooltipPosition="top"
-            tooltip="Set default colors"
-            onClick={() => {
-              props.act("set_tricolor_default_colors", {
-                preference: props.featureId,
-              });
-            }}>
-            {!props.shrink && (
-              <Box>
-                Set default
-              </Box>
-            ) || (
-              <Box>
-                D
-              </Box>
-            )}
-          </Button>
-        </Stack.Item>
-      )}
-      {props.featureId !== "mutant_colors" && (
-        <Stack.Item>
-          <Button
-            tooltipPosition="top"
-            tooltip="Set mutant colors"
-            onClick={() => {
-              props.act("set_tricolor_mutant_colors", {
-                preference: props.featureId,
-              });
-            }}>
-            {!props.shrink && (
-              <Box>
-                Set mutant
-              </Box>
-            ) || (
-              <Box>
-                M
-              </Box>
-            )}
-          </Button>
-        </Stack.Item>
-      )}
-    </Stack>
-  );
 };
 
 export type FeatureToggle = Feature<BooleanLike, boolean>;

@@ -12,9 +12,9 @@
 	projectile_type = /obj/projectile/bullet/l40mm
 	stack_type = null
 
-/obj/item/ammo_casing/l40mm/poop
+/obj/item/ammo_casing/l40mm/tox
 	name = "40mm IG shell"
-	desc = "An incredibly gassy grenade."
+	desc = "An incredibly toxic grenade."
 	world_icon_state = "40mmPOOP"
 	icon_state = "40mmPOOP"
 	base_icon_state = "40mmPOOP"
@@ -30,7 +30,7 @@
 
 /obj/item/ammo_casing/l40mm/inc
 	name = "40mm INC shell"
-	desc = "A cased incindary grenade that can only be activated once fired out of a grenade launcher."
+	desc = "A cased incendiary grenade that can only be activated once fired out of a grenade launcher."
 	world_icon_state = "40mmINC"
 	icon_state = "40mmINC"
 	base_icon_state = "40mmINC"

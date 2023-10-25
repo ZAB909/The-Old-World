@@ -4,7 +4,6 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
-		#include "_septic\map_files\Combat\Combat.dmm"
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
 

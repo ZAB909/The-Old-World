@@ -214,9 +214,6 @@
 			if(loud)
 				playsound(src, 'modular_septic/sound/weapons/grenade_safety.wav', 65, FALSE)
 				sound_hint()
-			for(var/mob/living/carbon/inborn in range(7, src))
-				if(inborn.dna?.species?.id == SPECIES_INBORN)
-					inborn.emote("smile") // :3
 			pin = new copy_of_pin(src)
 			update_appearance(UPDATE_ICON)
 		else

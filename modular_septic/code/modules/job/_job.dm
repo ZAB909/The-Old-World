@@ -2,7 +2,7 @@
 	/// Stat sheet this job uses, if any (ADDITIVE)
 	var/attribute_sheet
 	/// With this set to TRUE, the loadout will be applied before a job clothing will be
-	var/no_dresscode = FALSE
+	var/no_dresscode = TRUE
 	/// Whether the job can use the loadout system
 	var/loadout_enabled = TRUE
 	/// List of banned quirks in their names(dont blame me, that's how they're stored), players can't join as the job if they have the quirk. Associative for the purposes of performance
@@ -14,7 +14,7 @@
 	/// Blacklist of species for this job. Associative with TRUE.
 	var/list/species_blacklist
 	/// Which languages does the job require, associative to LANGUAGE_UNDERSTOOD or LANGUAGE_SPOKEN
-	var/list/required_languages = list(/datum/language/common = LANGUAGE_UNDERSTOOD|LANGUAGE_SPOKEN)
+	var/list/required_languages = list()
 
 /datum/job/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()

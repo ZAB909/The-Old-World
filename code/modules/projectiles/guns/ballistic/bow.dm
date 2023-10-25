@@ -1,4 +1,4 @@
-
+/*
 /obj/item/gun/ballistic/bow
 	name = "longbow"
 	desc = "While pretty finely crafted, surely you can find something better to use in the current year."
@@ -118,3 +118,4 @@
 
 /obj/item/storage/bag/quiver/despawning
 	arrow_path = /obj/item/ammo_casing/caseless/arrow/despawning
+*/

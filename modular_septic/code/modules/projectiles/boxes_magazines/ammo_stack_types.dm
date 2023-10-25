@@ -193,6 +193,18 @@
 /obj/item/ammo_box/magazine/ammo_stack/a276/loaded
 	start_empty = FALSE
 
+/obj/item/ammo_box/magazine/ammo_stack/a276/inc
+	name = "276 incendiary Federson rounds"
+	icon_state = "c762-1"
+	base_icon_state = "c762"
+	world_icon_state = "762-casing"
+	caliber = CALIBER_276
+	max_ammo = 8
+	ammo_type = /obj/item/ammo_casing/a276/inc
+
+/obj/item/ammo_box/magazine/ammo_stack/a276/loaded
+	start_empty = FALSE
+
 /obj/item/ammo_box/magazine/ammo_stack/shotgun
 	name = "12 gauge buckshot"
 	icon_state = "12gauge-1"
