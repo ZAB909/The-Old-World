@@ -232,21 +232,21 @@
 	tdir = dir // to fix Vars bug
 	switch(tdir)
 		if(NORTH)
-			if((pixel_y != initial(pixel_y)) && (pixel_y != 23))
+			if((pixel_y != initial(pixel_y)) && (pixel_y != -24))
 				log_mapping("APC: ([src]) at [AREACOORD(src)] with dir ([tdir] | [uppertext(dir2text(tdir))]) has pixel_y value ([pixel_y] - should be 23.)")
-			pixel_y = 23
+			pixel_y = -24
 		if(SOUTH)
-			if((pixel_y != initial(pixel_y)) && (pixel_y != -23))
+			if((pixel_y != initial(pixel_y)) && (pixel_y != 22))
 				log_mapping("APC: ([src]) at [AREACOORD(src)] with dir ([tdir] | [uppertext(dir2text(tdir))]) has pixel_y value ([pixel_y] - should be -23.)")
-			pixel_y = -23
+			pixel_y = 22
 		if(EAST)
-			if((pixel_y != initial(pixel_x)) && (pixel_x != 24))
+			if((pixel_y != initial(pixel_x)) && (pixel_x != -15))
 				log_mapping("APC: ([src]) at [AREACOORD(src)] with dir ([tdir] | [uppertext(dir2text(tdir))]) has pixel_x value ([pixel_x] - should be 24.)")
-			pixel_x = 24
+			pixel_x = -15
 		if(WEST)
-			if((pixel_y != initial(pixel_x)) && (pixel_x != -25))
+			if((pixel_y != initial(pixel_x)) && (pixel_x != 15))
 				log_mapping("APC: ([src]) at [AREACOORD(src)] with dir ([tdir] | [uppertext(dir2text(tdir))]) has pixel_x value ([pixel_x] - should be -25.)")
-			pixel_x = -25
+			pixel_x = 15
 	if (building)
 		area = get_area(src)
 		opened = APC_COVER_OPENED
@@ -1296,9 +1296,6 @@
 
 	var/excess = surplus()
 
-	//this is used to track whether or not we should play the freddy fazbear power out sound
-	var/was_freddy_fazbeared = ((equipment > APC_CHANNEL_OFF) && (equipment > APC_CHANNEL_OFF) && (equipment > APC_CHANNEL_OFF))
-
 	if(!avail())
 		main_status = APC_NO_POWER
 	else if(excess < 0)
@@ -1404,11 +1401,6 @@
 		lighting = autoset(lighting, AUTOSET_FORCE_OFF)
 		environ = autoset(environ, AUTOSET_FORCE_OFF)
 		alarm_manager.send_alarm(ALARM_POWER)
-
-	// play frederick fast bear sound if appropriate
-	var/is_freddy_fazbeared = ((equipment > APC_CHANNEL_OFF) && (equipment > APC_CHANNEL_OFF) && (equipment > APC_CHANNEL_OFF))
-	if(power_outage_sound && !was_freddy_fazbeared && is_freddy_fazbeared)
-		playsound(src, power_outage_sound, power_outage_volume, FALSE, power_outage_extrarange)
 
 	// update icon & area power if anything changed
 

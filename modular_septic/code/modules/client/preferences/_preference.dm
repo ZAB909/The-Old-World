@@ -54,6 +54,7 @@
 	return istext(value)
 
 // Mismatched parts support
+/*
 /datum/preference/is_accessible(datum/preferences/preferences)
 	if(!isnull(relevant_mutant_bodypart) || !isnull(relevant_species_trait))
 		var/species_type = preferences.read_preference(/datum/preference/choiced/species)
@@ -67,7 +68,7 @@
 		return FALSE
 
 	return TRUE
-
+*/
 // Adds preferences argument for ease of use
 /datum/preference/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	SHOULD_CALL_PARENT(FALSE)

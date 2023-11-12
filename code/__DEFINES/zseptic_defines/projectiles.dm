@@ -14,3 +14,5 @@
 #define CALIBER_500 ".500 magnum"
 #define CALIBER_276 ".276 Federson"
 #define	CALIBER_BATTERY "batteries"
+#define CALIBER_ARROW "arrow"
+#define CALIBER_80 ".80 cal"

@@ -18,8 +18,8 @@
 	return BULLET_ACT_HIT
 
 /obj/projectile/bullet/gas40mm
-	name ="40mm gassy grenade"
-	desc = "OH MY GOODNESS GRACIOUS"
+	name ="40mm toxic grenade"
+	desc = "Holy shit run"
 	icon = 'modular_septic/icons/obj/items/guns/projectiles/projectiles.dmi'
 	icon_state= "bolter"
 	damage = 30
@@ -30,9 +30,9 @@
 /obj/projectile/bullet/gas40mm/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	playsound(src, 'modular_septic/sound/effects/gassy.ogg', 95, TRUE, 1)
-	var/turf/gassyturf = get_turf(src)
-	if(istype(gassyturf))
-		gassyturf.pollute_turf(/datum/pollutant/incredible_gas, 1000)
+	var/turf/toxicturf = get_turf(src)
+	if(istype(toxicturf))
+		toxicturf.pollute_turf(/datum/pollutant/incredible_gas, 1000)
 	return BULLET_ACT_HIT
 
 /obj/projectile/bullet/smoke40mm
@@ -65,5 +65,5 @@
 
 /obj/projectile/bullet/inc40mm/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	explosion(target, devastation_range = -1, light_impact_range = 1, flame_range = 5, flash_range = 3, adminlog = FALSE, explosion_cause = src)
+	explosion(target, devastation_range = 0, light_impact_range = 0, flame_range = 5, flash_range = 3, adminlog = FALSE, explosion_cause = src)
 	return BULLET_ACT_HIT

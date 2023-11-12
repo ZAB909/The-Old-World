@@ -1,16 +1,8 @@
 /datum/job
 	/// Stat sheet this job uses, if any (ADDITIVE)
 	var/attribute_sheet
-	/// Whether or not this job has a circumcised penis
-	var/penis_circumcised = FALSE
-	/// Minimum breast size for this role (gets converted to cup size)
-	var/min_breastsize = 1
-	/// Maximum breast size for this role (gets converted to cup size)
-	var/max_breastsize = 3
-	/// Whether or not this job has lactating breasts
-	var/breasts_lactating = FALSE
 	/// With this set to TRUE, the loadout will be applied before a job clothing will be
-	var/no_dresscode = FALSE
+	var/no_dresscode = TRUE
 	/// Whether the job can use the loadout system
 	var/loadout_enabled = TRUE
 	/// List of banned quirks in their names(dont blame me, that's how they're stored), players can't join as the job if they have the quirk. Associative for the purposes of performance
@@ -22,75 +14,12 @@
 	/// Blacklist of species for this job. Associative with TRUE.
 	var/list/species_blacklist
 	/// Which languages does the job require, associative to LANGUAGE_UNDERSTOOD or LANGUAGE_SPOKEN
-	var/list/required_languages = list(/datum/language/common = LANGUAGE_UNDERSTOOD|LANGUAGE_SPOKEN)
+	var/list/required_languages = list()
 
 /datum/job/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
 	if(spawned.attributes)
 		assign_attributes(spawned, player_client)
-	if(ishuman(spawned))
-		var/mob/living/carbon/human/spawned_human = spawned
-		//lemun
-		if(player_client?.ckey == "ltkoepple")
-			spawned.put_in_hands(new /obj/item/food/grown/citrus/lemon(spawned.drop_location()), FALSE)
-		//chipraps plushie
-		if(spawned.ckey == "chrapacz2000")
-			spawned.put_in_hands(new /obj/item/toy/plush/chipraps(spawned.drop_location()), FALSE)
-		//ilovelean
-		if(player_client?.ckey == "shyshadow")
-			spawned.put_in_hands(new /obj/item/reagent_containers/glass/bottle/lean(spawned.drop_location()), FALSE)
-		//bob joga
-		if(player_client?.ckey == "ChaoticAgent")
-			spawned.put_in_hands(new /obj/item/food/egg(spawned.drop_location()), FALSE)
-		//sponge
-		if(player_client?.ckey == "Phun puhn")
-			spawned.put_in_hands(new /obj/item/cellphone/sponge(spawned.drop_location()), FALSE)
-		//thug hunter equipment
-		if(player_client?.ckey == "Glennerbean")
-			spawned.put_in_hands(new /obj/item/gun/ballistic/automatic/pistol/remis/glock17(spawned.drop_location()), FALSE)
-			spawned.put_in_hands(new /obj/item/ammo_box/magazine/glock9mm(spawned.drop_location()), FALSE)
-		//mugmoment
-		if(player_client?.ckey == "GarfieldLives")
-			spawned.put_in_hands(new /obj/item/reagent_containers/food/drinks/soda_cans/mug(spawned.drop_location()), FALSE)
-		if(SSmapping.config?.everyone_is_fucking_naked)
-			incinerate_inventory(spawned)
-		else
-			if(locate(/obj/effect/landmark/start/generic) in get_turf(spawned))
-				put_stuff_in_spawn_closet(spawned)
-		spawned.gain_extra_effort(1, TRUE)
-		var/birthday = spawned_human.day_born
-		var/birthday_month = month_text(spawned_human.month_born)
-		var/station_realtime = SSstation_time.get_station_realtime()
-		var/DD = text2num(time2text(station_realtime, "DD")) //  current day (numeric)
-		var/month = lowertext(time2text(station_realtime, "Month")) // current month (text)
-		if((birthday == DD) && (month == birthday_month) && !(departments_bitflags & DEPARTMENT_BITFLAG_UNPEOPLE))
-			var/birthday_pronoun = "Boy"
-			if(spawned_human.gender == FEMALE)
-				birthday_pronoun = "Girl"
-			var/birthday_gif = "\n<img src='https://c.tenor.com/z2DuAR_wtEQAAAAM/emoji-hat.gif' width=90 height=64>"
-			minor_announce("Today is [spawned_human.real_name]'s birthday! Remember to bring [spawned_human.p_them()] cake![birthday_gif]", "Birthday [birthday_pronoun]!", FALSE, FALSE)
-			var/birthday_boy_on_station = SSmapping.level_trait(spawned.z, ZTRAIT_STATION)
-			if(birthday_boy_on_station)
-				for(var/mob/living/carbon/human/viewer in GLOB.player_list)
-					//They already have the memory of their own birthday
-					if(viewer == spawned_human)
-						continue
-					var/viewer_on_station = SSmapping.level_trait(viewer.z, ZTRAIT_STATION)
-					if(viewer_on_station)
-						viewer.mind?.add_memory(memory_type = MEMORY_BIRTHDAY,
-												extra_info = list(DETAIL_PROTAGONIST = spawned_human, DETAIL_BIRTHDAY_AGE = spawned_human.age), \
-												story_value = STORY_VALUE_LEGENDARY, \
-												memory_flags = MEMORY_FLAG_NOPERSISTENCE)
-			var/datum/bank_account/bank_account= spawned.get_bank_account()
-			if(bank_account)
-				//happy birthday!
-				bank_account.adjust_money(rand(1000, 2000))
-				//even happier birthday!
-				if(departments_bitflags & DEPARTMENT_BITFLAG_NOBILITY)
-					bank_account.adjust_money(2000)
-			GLOB.data_core.birthday_boys += spawned_human.real_name
-	// this needs to be reset to pick up the color from preferences
-	spawned.chat_color_name = ""
 
 /datum/job/get_roundstart_spawn_point()
 	if(random_spawns_possible)

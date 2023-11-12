@@ -15,20 +15,6 @@
 	mood_change = 6
 	timeout = 5 MINUTES
 
-//I LOVE LEAAAANNNNNN!!!
-/datum/mood_event/lean
-	description = span_purple("I love lean...")
-	mood_change = 4
-	timeout = 3 MINUTES
-
-/datum/mood_event/lean/add_effects(mob/living/lean_monster)
-	var/list/messages = list("Uh, fuckin' hoes that ain't worth a cent", "In homes that ain't worth the rent", "Yuh, ooh, brr, brr", "Gucci gang, ooh", "Yuh, Lil Chungus, yuh", "Okay, let's get it now nigga", "Fake nigga lie to a real nigga", "These hoes ain't loyal.", "I hate that [lean_monster.real_name] kid.")
-	if((lean_monster.job == "Ordinator") || (lean_monster.job == "Coordinator") || (lean_monster.job == "Mayor" ))
-		messages += "Let's fuck up some beggers, let's do that shit random"
-	else
-		messages += "Let's fuck up some ordinators, let's do that shit random"
-	description = span_purple(pick(messages))
-
 //Buried/cremated someone
 /datum/mood_event/proper_burial
 	description = span_nicegreen("Not everyone can be saved. At least they have been put to rest.")
@@ -57,25 +43,4 @@
 	mood_change = 2
 	hidden = TRUE
 
-//Cum on face
-/datum/mood_event/creampie/bukkake
-	description = span_nicegreen("My face is <b>drenched</b> in cum!")
-	mood_change = 3
-	timeout = 5 MINUTES
-
-/datum/mood_event/creampie/cummies
-	description = span_nicegreen("My face is covered in cum.")
-	mood_change = 2
-	timeout = 3 MINUTES
-
-//Femcum on face
-/datum/mood_event/creampie/fembukkake
-	description = span_nicegreen("My face is <b>drenched</b> in squirt!")
-	mood_change = 3
-	timeout = 5 MINUTES
-
-/datum/mood_event/creampie/femcummies
-	description = span_nicegreen("My face is covered in squirt.")
-	mood_change = 2
-	timeout = 3 MINUTES
 

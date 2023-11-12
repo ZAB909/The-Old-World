@@ -5,4 +5,3 @@
 
 /obj/structure/fireaxecabinet/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/wall_mount)

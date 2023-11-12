@@ -1,4 +1,5 @@
 /// Hide mutant bodyparts
+/*
 /mob/living/carbon/human/proc/hide_furry_shit()
 	set name = "Hide Mutant Bodyparts"
 	set category = "IC"
@@ -16,7 +17,7 @@
 		ADD_TRAIT(src, TRAIT_HIDING_MUTANTPARTS, VERB_TRAIT)
 		to_chat(src, span_notice("I will now hide my mutant bodyparts."))
 	update_mutant_bodyparts()
-
+*/
 //Zombification
 /mob/living/carbon/human/proc/prepare_to_walk()
 	set name = "Hell is full"

@@ -22,10 +22,6 @@
 /mob/living/carbon/human/death_rattle()
 	return dna?.species?.death_rattle(src)
 
-// sexy moan
-/mob/living/carbon/human/sexy_moan()
-	return dna?.species?.sexy_moan(src)
-
 // jump grunt
 /mob/living/carbon/human/jump_grunt()
 	return dna?.species?.jump_grunt(src)

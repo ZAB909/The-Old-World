@@ -939,6 +939,7 @@
 		SKILL_PISTOL = list(-2, 2),
 		SKILL_SHOTGUN = list(-1, 2),
 		SKILL_RIFLE = list(-2, 2),
+		SKILL_BOW = list (2, 5),
 		SKILL_LONGSWORD = list(-2, 2),
 		SKILL_FORCESWORD = list(-2, 2),
 		SKILL_THROWING = list(-4, 2),
@@ -957,6 +958,7 @@
 		SKILL_PISTOL = 2,
 		SKILL_SHOTGUN = 2,
 		SKILL_RIFLE = 2,
+		SKILL_BOW = 5,
 		SKILL_LONGSWORD = 1,
 		SKILL_FORCESWORD = -2,
 		SKILL_THROWING = 2,
@@ -966,3 +968,245 @@
 		SKILL_ACROBATICS = 3,
 		SKILL_ELECTRONICS = 5,
 	)
+
+//LOST GEHENNA//
+
+//EXPEDITION LEADER
+/datum/attribute_holder/sheet/job/leader
+    attribute_variance = list(
+		STAT_STRENGTH = list(-1, 2),
+		STAT_ENDURANCE = list(-2, 2),
+		STAT_DEXTERITY = list(-1, 3),
+		STAT_INTELLIGENCE = list(1, 5),
+		SKILL_BRAWLING = list (-1, 1),
+		SKILL_WRESTLING = list (-1, 1),
+		SKILL_RIFLE = list (2, 6),
+		SKILL_RAPIER = list (-1, 3),
+		SKILL_KNIFE = list (-1, 2),
+		SKILL_BOW = list (2, 5),
+		SKILL_MUSKET = list (-1, 2),
+		SKILL_THROWING = list (-1, 2),
+		SKILL_ACROBATICS = list (-1, 2),
+    )
+    raw_attribute_list = list(
+		SKILL_BRAWLING = 1,
+		SKILL_WRESTING = 1,
+		SKILL_RIFLE = 8,
+		SKILL_RAPIER = 4,
+		SKILL_KNIFE = 1,
+		SKILL_BOW = 5,
+		SKILL_MUSKET = 1,
+		SKILL_THROWING = 1,
+		SKILL_ACROBATICS = 2,
+	)
+
+//Condotteire
+/datum/attribute_holder/sheet/job/condotteire
+    attribute_variance = list(
+		STAT_STRENGTH = list(2, 4),
+		STAT_ENDURANCE = list(1, 3),
+		STAT_DEXTERITY = list(1, 4),
+		STAT_INTELLIGENCE = list(-3, -1),
+		SKILL_BRAWLING = list(-1, 2),
+		SKILL_WRESTLING = list (-1, 2),
+		SKILL_IMPACT_WEAPON = list (-1, 3),
+		SKILL_SHORTSWORD = list (-1, 4),
+		SKILL_SHIELD = list (-1, 3),
+		SKILL_THROWING = list (-1, 3),
+		SKILL_ACROBATICS = list (-1, 4),
+		SKILL_CULINARY = list (-1, 1),
+	)
+    raw_attribute_list = list (
+		SKILL_BRAWLING = 2,
+		SKILL_WRESTLING = 2,
+		SKILL_IMPACT_WEAPON = 4,
+		SKILL_SHORTSWORD = 4,
+		SKILL_SHIELD = 4,
+		SKILL_THROWING = 2,
+		SKILL_ACROBATICS = 3,
+		SKILL_MEDICINE = 1,
+		SKILL_SURGERY = 1,
+		SKILL_CULINARY = 2,
+	)
+
+//Poacher
+/datum/attribute_holder/sheet/job/poacher
+    attribute_variance = list(
+		STAT_STRENGTH = list(-1, 2),
+		STAT_ENDURANCE = list(-2, 1),
+		STAT_DEXTERITY = list(2, 3),
+		STAT_INTELLIGENCE = list(-1, 2),
+		SKILL_BRAWLING = list(-1, 1),
+		SKILL_WRESTLING = list(-1, 1),
+		SKILL_KNIFE = list(-1, 2),
+		SKILL_CROSSBOW = list(1, 4),
+		SKILL_THROWING = list(-0, 3),
+		SKILL_ACROBATICS = list(-1, 2),
+		SKILL_CULINARY = list (-1, 2),
+	)
+    raw_attribute_list = list(
+		SKILL_BRAWLING = 1,
+		SKILL_WRESTLING = 1,
+		SKILL_KNIFE = 3,
+		SKILL_CROSSBOW = 6,
+		SKILL_THROWING = 3,
+		SKILL_ACROBATICS = 2,
+		SKILL_CULINARY = 3,
+		SKILL_MEDICINE = 1,
+		SKILL_SURGERY = 1,
+	)
+
+//Swashbuckler
+/datum/attribute_holder/sheet/job/Swashbuckler
+    attribute_variance = list(
+		STAT_STRENGTH = list(1, 2),
+		STAT_ENDURANCE = list(-3, -1),
+		STAT_DEXTERITY = list(4, 7),
+		STAT_INTELLIGENCE = list(-1, 1),
+		SKILL_BRAWLING = list(-1, 1),
+		SKILL_WRESTLING = list(-1, 1),
+		SKILL_RAPIER = list (1, 4),
+		SKILL_THROWING = list (-1, 1),
+		SKILL_ACROBATICS = list (-1, 2),
+	)
+    raw_attribute_list = list(
+		SKILL_BRAWLING = 1,
+		SKILL_WRESTLING = 1,
+		SKILL_RAPIER = 6,
+		SKILL_THROWING = 1,
+		SKILL_ACROBATICS = 2,
+	)
+
+//Duelist
+/datum/attribute_holder/sheet/job/duelist
+    attribute_variance = list(
+		STAT_STRENGTH = list(-2, 1),
+		STAT_ENDURANCE = list(-2, -1),
+		STAT_DEXTERITY = list(1, 4),
+		STAT_INTELLIGENCE = list(-1, 1),
+		SKILL_BRAWLING = list (-2, 1),
+		SKILL_WRESTLING = list (-2, 1),
+		SKILL_KNIFE = list (-1, 3),
+		SKILL_MUSKET = list (1, 4),
+		SKILL_THROWING = list (1, 2),
+		SKILL_ACROBATICS = list (-1, 3),
+	)
+    raw_attribute_list = list(
+        SKILL_BRAWLING = 1,
+		SKILL_WRESTLING = 1,
+		SKILL_KNIFE = 3,
+		SKILL_MUSKET = 4,
+		SKILL_THROWING = 4,
+		SKILL_ACROBATICS = 2,
+		SKILL_MEDICINE = 1,
+		SKILL_SURGERY = 1,
+	)
+
+//Musketeer
+/datum/attribute_holder/sheet/job/musketeer
+    attribute_variance = list(
+		STAT_STRENGTH = list(-3, 1),
+		STAT_ENDURANCE = list(-5, -1),
+		STAT_DEXTERITY = list(1, 4),
+		STAT_INTELLIGENCE = list(-1, 1),
+		SKILL_BRAWLING = list (-2, 1),
+		SKILL_WRESTLING = list (-2, 1),
+		SKILL_KNIFE = list (-1, 3),
+		SKILL_MUSKET = list (2, 8),
+		SKILL_THROWING = list (-1, 2),
+		SKILL_ACROBATICS = list (-1, 3),
+	)
+    raw_attribute_list = list(
+		SKILL_BRAWLING = 1,
+		SKILL_WRESTLING = 1,
+		SKILL_KNIFE = 2,
+		SKILL_MUSKET = 5,
+		SKILL_THROWING = 1,
+		SKILL_ACROBATICS = 2,
+		SKILL_MEDICINE = 1,
+		SKILL_SURGERY = 1,
+	)
+
+//Camphand
+/datum/attribute_holder/sheet/job/camphand
+    attribute_variance = list(
+		STAT_STRENGTH = list(1, 2),
+		STAT_ENDURANCE = list(-1, 1),
+		STAT_DEXTERITY = list(-1, 1),
+		STAT_INTELLIGENCE = list(-1, 1),
+		SKILL_BRAWLING = list (-1, 1),
+		SKILL_WRESTLING = list (-1, 1),
+		SKILL_KNIFE = list (-1, 2),
+		SKILL_THROWING = list (-1, 1),
+		SKILL_CULINARY = list (1, 4),
+	)
+    raw_attribute_list = list(
+		SKILL_BRAWLING = 1,
+		SKILL_WRESTLING = 1,
+		SKILL_KNIFE = 4,
+		SKILL_THROWING = 2,
+		SKILL_CULINARY = 4,
+	)
+
+//Leechlet
+/datum/attribute_holder/sheet/job/leechlet
+    attribute_variance = list(
+		STAT_STRENGTH = list(-3, -1),
+		STAT_ENDURANCE = list(-1, 1),
+		STAT_DEXTERITY = list(-1, 2),
+		STAT_INTELLIGENCE = list(4, 7),
+		SKILL_BRAWLING = list (-1, 1),
+		SKILL_WRESTLING = list (-1, 1),
+		SKILL_KNIFE = list (1, 2),
+		SKILL_THROWING = list (-1, 1),
+		SKILL_MEDICINE = list (1, 4),
+		SKILL_SURGERY = list (1, 4),
+		SKILL_CHEMISTRY = list (0, 2),
+	)
+    raw_attribute_list = list(
+        SKILL_BRAWLING = 1,
+		SKILL_WRESTLING = 1,
+		SKILL_KNIFE = 3,
+		SKILL_THROWING = 1,
+		SKILL_MEDICINE = 6,
+		SKILL_SURGERY = 4,
+		SKILL_CHEMISTRY = 3,
+	)
+
+/*MARTIAL
+/datum/attribute_holder/sheet/job/martial
+    attribute_variance = list(
+		STAT_STRENGTH = list(1, 3),
+		STAT_ENDURANCE = list(1, 3),
+		STAT_DEXTERITY = list(1, 5),
+		STAT_INTELLIGENCE = list(-2, -1),
+		SKILL_BRAWLING = list (-1, 3),
+		SKILL_WRESTLING = list (-1, 3),
+		SKILL_IMPACT_WEAPON = list (-1, 3),
+		SKILL_IMPACT_WEAPON_TWOHANDED = list (-1, 3),
+		SKILL_SHORTSWORD = list (-1, 5),
+		SKILL_LONGSWORD = list (-1, 5),
+		SKILL_POLEARM = list (-1, 3),
+		SKILL_CROSSBOW = list (-1, 2),
+		SKILL_MUSKET = list (-2, 2),
+		SKILL_THROWING = list (-1, 2),
+		SKILL_SHIELD = list (-1, 4),
+		SKILL_ACROBATICS = list (-2, 2),
+	)
+    raw_attribute_list = list(
+		SKILL_BRAWLING = 2,
+		SKILL_WRESTLING = 2,
+		SKILL_IMPACT_WEAPON = 2,
+		SKILL_IMPACT_WEAPON_TWOHANDED = 2,
+		SKILL_SHORTSWORD = 5,
+		SKILL_LONGSWORD = 2,
+		SKILL_POLEARM = 4,
+		SKILL_CROSSBOW = 2,
+		SKILL_MUSKET = 2,
+		SKILL_THROW = 3,
+		SKILL_SHIELD = 3,
+		SKILL_ACROBATICS = 4,
+		SKILL_MEDICINE = 1,
+		SKILL_SURGERY = 1,
+	)
+*/

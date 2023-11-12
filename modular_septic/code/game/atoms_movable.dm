@@ -44,8 +44,8 @@
  */
 /atom/movable/proc/get_throwforce(mob/living/user, strength_value = ATTRIBUTE_MIDDLING)
 	var/final_throwforce = rand(min_throwforce*10, throwforce*10)/10
-	/// Fraggots are always considered to have absolutely 0 strength
-	if(!user || !HAS_TRAIT(user, TRAIT_FRAGGOT))
+	/// Forsaken are always considered to have absolutely 0 strength
+	if(!user || !HAS_TRAIT(user, TRAIT_FORSAKEN))
 		var/strength_multiplier = CEILING(rand(min_throwforce_strength*10, throwforce_strength*10)/10, DAMAGE_PRECISION)
 		/**
 		 * If the multiplier is negative, we instead punish the dude for each point of strength below ATTRIBUTE_MASTER

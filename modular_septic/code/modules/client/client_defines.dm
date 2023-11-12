@@ -4,7 +4,7 @@
 	var/datum/matrix_editor/nobody_wants_to_learn_matrix_math
 	/// Last attribute editor we opened if we happen to be an admin fucking around
 	var/datum/attribute_editor/attribute_editor
-	/// Defaults the country to niger i think that is funny
+	/// Defaults the country to Australia, welcome to hell
 	var/country = DEFAULT_CLIENT_COUNTRY
 	/// Political compass datum
 	var/datum/political_compass/political_compass

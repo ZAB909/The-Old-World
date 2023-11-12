@@ -44,7 +44,7 @@
 	random_dysentery.hopelessness = "Considerable"
 	random_dysentery.severity = DISEASE_SEVERITY_HARMFUL
 	random_dysentery.try_infect(eater)
-	//shit on face, yum
+	//shit on face, disgusting
 	if(ishuman(eater))
 		AddComponent(eater, /datum/component/creamed/shit)
 

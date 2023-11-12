@@ -34,11 +34,6 @@
 		return FALSE
 	H.emote("deathrattle")
 
-/datum/species/proc/sexy_moan(mob/living/carbon/human/H)
-	if(!istype(H))
-		return FALSE
-	H.emote("sexymoan")
-
 /datum/species/proc/jump_grunt(mob/living/carbon/human/H)
 	if(!istype(H))
 		return FALSE
